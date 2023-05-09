@@ -4,25 +4,27 @@ import ProjectTile from "../common/project-tile";
 import { gsap, Linear } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { IDesktop } from "../page";
-import { NO_MOTION_PREFERENCE_QUERY } from '../utils/libs';
-
+import { NO_MOTION_PREFERENCE_QUERY } from "../utils/libs";
 
 const PROJECT_STYLES = {
   SECTION:
-    "w-full relative select-none section-container flex-col flex py-8 justify-center",
+    "w-full relative select-none section-container flex-col flex py-8 px-8 justify-center",
   PROJECTS_WRAPPER:
     "tall:mt-12 mt-6 grid grid-flow-col auto-cols-max md:gap-10 gap-6 project-wrapper w-fit seq snap-x scroll-pl-6 snap-mandatory",
 };
 
 const ProjectsSection = ({ isDesktop }: IDesktop) => {
-
-const sectionTitleElementRef = useRef<HTMLDivElement>(null) as MutableRefObject<HTMLDivElement>;
-const targetSectionRef = useRef<HTMLDivElement>(null) as MutableRefObject<HTMLDivElement>;
-
+  const sectionTitleElementRef = useRef<HTMLDivElement>(
+    null
+  ) as MutableRefObject<HTMLDivElement>;
+  const targetSectionRef = useRef<HTMLDivElement>(null) as MutableRefObject<
+    HTMLDivElement
+  >;
 
   const [willChange, setwillChange] = useState(false);
-  const [horizontalAnimationEnabled, sethorizontalAnimationEnabled] =
-    useState(false);
+  const [horizontalAnimationEnabled, sethorizontalAnimationEnabled] = useState(
+    false
+  );
 
   const initRevealAnimation = (
     targetSectionRef: MutableRefObject<HTMLDivElement>
@@ -53,11 +55,11 @@ const targetSectionRef = useRef<HTMLDivElement>(null) as MutableRefObject<HTMLDi
 
     const sidePadding =
       document.body.clientWidth -
-      targetSectionRef.current.querySelector(".inner-container").clientWidth;
-      
+      targetSectionRef.current!.querySelector(".inner-container")!.clientWidth;
+
     const elementWidth =
       sidePadding +
-      targetSectionRef.current.querySelector(".project-wrapper").clientWidth;
+      targetSectionRef.current!.querySelector(".project-wrapper")!.clientWidth;
 
     targetSectionRef.current.style.width = `${elementWidth}px`;
     const width = window.innerWidth - elementWidth;
@@ -111,8 +113,9 @@ const targetSectionRef = useRef<HTMLDivElement>(null) as MutableRefObject<HTMLDi
       );
     }
 
-    const [revealTimeline, revealScrollTrigger] =
-      initRevealAnimation(targetSectionRef);
+    const [revealTimeline, revealScrollTrigger] = initRevealAnimation(
+      targetSectionRef
+    );
 
     return () => {
       projectsScrollTrigger && projectsScrollTrigger.kill();

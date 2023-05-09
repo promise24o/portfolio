@@ -17,6 +17,7 @@ const Contact = dynamic(() => import("./contact-section/Contact"));
 const Footer = dynamic(() => import("./footer/Footer"));
 import { isSmallScreen, NO_MOTION_PREFERENCE_QUERY } from './utils/libs';
 import TimelineSection from "./timelines/Timeslines";
+import ProjectsSection from "./work-section/Projects";
 
 
 const DEBOUNCE_TIME = 100;
@@ -84,6 +85,7 @@ export default function Home() {
         <Hero />
         <StorySection/>
         <TimelineSection isDesktop={false}/>
+        {/* <ProjectsSection  isDesktop={true} /> */}
         <Work />
         <About />
         <Blog />

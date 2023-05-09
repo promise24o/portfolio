@@ -26,6 +26,6 @@
     "**/*.tsx",
     "app/work-section/projectDetails.ts",
     "app/animations/PreLoader/loader.js"
-  ],
+, "app/work-section/Projects.js"  ],
   "exclude": ["node_modules"]
 }
