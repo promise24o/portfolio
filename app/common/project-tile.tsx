@@ -1,4 +1,4 @@
-import styles from "./ProjectTile.module.scss";
+import styles from "./ProjectTiles.module.scss";
 import Image from "next/image";
 import React, { MutableRefObject, useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";

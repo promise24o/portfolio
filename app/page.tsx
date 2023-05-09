@@ -18,6 +18,7 @@ const Footer = dynamic(() => import("./footer/Footer"));
 import { isSmallScreen, NO_MOTION_PREFERENCE_QUERY } from './utils/libs';
 import TimelineSection from "./timelines/Timeslines";
 import ProjectsSection from "./work-section/Projects";
+import Projects from "./projects/Projects";
 
 
 const DEBOUNCE_TIME = 100;
@@ -29,6 +30,7 @@ export interface IDesktop {
 export default function Home() {
   const blobityInstance = useBlobity(initialBlobityOptions);
   gsap.registerPlugin(ScrollTrigger);
+  
   gsap.config({ nullTargetWarn: false });
 
   const [isDesktop, setisDesktop] = useState(true);
@@ -85,8 +87,8 @@ export default function Home() {
         <Hero />
         <StorySection/>
         <TimelineSection isDesktop={false}/>
-        {/* <ProjectsSection  isDesktop={true} /> */}
-        <Work />
+        <ProjectsSection  isDesktop={true} />
+        {/* <Work /> */}
         <About />
         <Blog />
         <Contact />
