@@ -17,7 +17,7 @@ const Footer = () => {
             className={"m-0 p-0"}
           />
           <Link
-            href="https://github.com/promise240"
+            href="https://github.com/promise24o"
             target="_blank"
             aria-label="Promise Obe's GitHub Profile"
           >

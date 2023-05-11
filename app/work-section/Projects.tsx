@@ -150,13 +150,13 @@ const ProjectsSection = ({ isDesktop }: IDesktop) => {
       ></ProjectTile>
     ));
 
-  const { ref: projectsSectionRef } = MENULINKS[1];
+  // const { ref: projectsSectionRef } = MENULINKS[1];
 
   return (
     <section
       ref={targetSectionRef}
       className={`${isDesktop && "min-h-screen"} ${PROJECT_STYLES.SECTION}`}
-      id={projectsSectionRef}
+      id="projects"
     >
       {renderSectionTitle()}
       <div className={PROJECT_STYLES.PROJECTS_WRAPPER}>
