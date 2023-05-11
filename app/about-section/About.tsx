@@ -55,15 +55,14 @@ const About = () => {
               }
             />
           </div>
-          </div>
+        </div>
 
-          <div className="mb-24 flex w-[100%] flex-col gap-4 text-[18px] font-normal leading-relaxed tracking-wide text-[#e4ded7]/80 sm:mb-32 md:mb-40 md:gap-6 md:text-[16px] md:leading-normal lg:mt-0 lg:mb-16 lg:max-w-[30%] lg:text-[18px]">
+        <div className="mb-24 flex w-full flex-col gap-4 text-18 font-normal leading-relaxed tracking-wide text-[#e4ded7]/80 sm:mb-32 md:mb-40 md:gap-6 md:text-16 md:leading-normal lg:mt-0 lg:mb-16 lg:max-w-[30%] lg:text-18">
+          <div className="grid grid-cols-2 gap-8">
             <div className="flex flex-col gap-4 md:gap-3">
               <AnimatedTitle
                 text={"Frontend Tools"}
-                className={
-                  "text-[24px] text-[#e4ded7] md:text-[30px] lg:text-[20px]"
-                }
+                className={"text-24 text-[#e4ded7] md:text-30 lg:text-20"}
                 wordSpace={"mr-[0.25em]"}
                 charSpace={"mr-[0.01em]"}
               />
@@ -73,12 +72,10 @@ const About = () => {
                 }
               />
             </div>
-            <div className="flex flex-col gap-4 md:gap-3"> 
+            <div className="flex flex-col gap-4 md:gap-3">
               <AnimatedTitle
                 text={"Backend Tools & Database"}
-                className={
-                  "text-[24px] text-[#e4ded7] md:text-[30px] lg:text-[20px]"
-                }
+                className={"text-24 text-[#e4ded7] md:text-30 lg:text-20"}
                 wordSpace={"mr-[0.25em]"}
                 charSpace={"mr-[0.01em]"}
               />
@@ -91,9 +88,7 @@ const About = () => {
             <div className="flex flex-col gap-3">
               <AnimatedTitle
                 text={"UI Libraries"}
-                className={
-                  "text-[24px] text-[#e4ded7] md:text-[30px] lg:text-[20px]"
-                }
+                className={"text-24 text-[#e4ded7] md:text-30 lg:text-20"}
                 wordSpace={"mr-[0.25em]"}
                 charSpace={"mr-[0.01em]"}
               />
@@ -106,9 +101,7 @@ const About = () => {
             <div className="flex flex-col gap-3">
               <AnimatedTitle
                 text={"Design Tools"}
-                className={
-                  "text-[24px] text-[#e4ded7] md:text-[30px] lg:text-[20px]"
-                }
+                className={"text-24 text-[#e4ded7] md:text-30 lg:text-20"}
                 wordSpace={"mr-[0.25em]"}
                 charSpace={"mr-[0.01em]"}
               />
@@ -120,7 +113,8 @@ const About = () => {
             </div>
           </div>
         </div>
-        {/* <div className="mt-10 flex flex-col md:-mt-0 lg:mt-28">
+      </div>
+      {/* <div className="mt-10 flex flex-col md:-mt-0 lg:mt-28">
           <SongCarousel />
           <AnimatedBody
             text="A few songs I can recommend if you're looking for some fresh tunes :)"
